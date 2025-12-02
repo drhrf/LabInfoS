@@ -1,0 +1,28 @@
+[
+  {
+    "title": "[TÍTULO DA PUBLICAÇÃO 1]",
+    "authors": "[AUTORES no formato que você preferir]",
+    "year": 2025,
+    "type": "Artigo",
+    "journal": "[PERIÓDICO / EVENTO]",
+    "doi": "[apenas o sufixo do DOI, ex: 10.1234/abc.2025.001]",
+    "pdf": "[URL do PDF (opcional)]",
+    "preprint": "[URL do preprint (opcional)]",
+    "code_or_data": "[URL de código/dados (opcional)]",
+    "keywords": ["saúde", "dados", "IA"],
+    "note": "[PREENCHA: nota curta opcional, ex.: 'Acesso aberto' / 'Em colaboração com ...']"
+  },
+  {
+    "title": "[TÍTULO DA PUBLICAÇÃO 2]",
+    "authors": "[AUTORES]",
+    "year": 2024,
+    "type": "Preprint",
+    "journal": "[Servidor / Repositório]",
+    "doi": "",
+    "pdf": "",
+    "preprint": "",
+    "code_or_data": "",
+    "keywords": ["reprodutibilidade", "pipeline"],
+    "note": ""
+  }
+]

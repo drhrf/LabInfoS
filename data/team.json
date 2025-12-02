@@ -1,0 +1,72 @@
+[
+  {
+    "name": "[PESQUISADOR(A) 1]",
+    "role": "Coordenação",
+    "bio": "[PREENCHA: mini-bio (2–4 linhas): área, método, aplicações, interesses.]",
+    "keywords": ["informática em saúde", "ciência de dados", "métodos"],
+    "affiliation": "[PREENCHA: instituição/departamento]",
+    "area": "[PREENCHA: área]",
+    "photo": "assets/img/team/p1.svg",
+    "email": "[PREENCHA: email (opcional)]",
+    "lattes": "[PREENCHA: link Lattes]",
+    "orcid": "[PREENCHA: link ORCID]",
+    "scholar": "[PREENCHA: link Google Scholar]",
+    "github": "[PREENCHA: link GitHub (opcional)]"
+  },
+  {
+    "name": "[PESQUISADOR(A) 2]",
+    "role": "Pesquisador(a)",
+    "bio": "[PREENCHA]",
+    "keywords": ["modelagem", "validação", "saúde pública"],
+    "affiliation": "[PREENCHA]",
+    "area": "[PREENCHA]",
+    "photo": "assets/img/team/p2.svg",
+    "email": "",
+    "lattes": "",
+    "orcid": "",
+    "scholar": "",
+    "github": ""
+  },
+  {
+    "name": "[PESQUISADOR(A) 3]",
+    "role": "Pesquisador(a)",
+    "bio": "[PREENCHA]",
+    "keywords": ["NLP", "dados clínicos", "qualidade"],
+    "affiliation": "[PREENCHA]",
+    "area": "[PREENCHA]",
+    "photo": "assets/img/team/p3.svg",
+    "email": "",
+    "lattes": "",
+    "orcid": "",
+    "scholar": "",
+    "github": ""
+  },
+  {
+    "name": "[PESQUISADOR(A) 4]",
+    "role": "Pesquisador(a)",
+    "bio": "[PREENCHA]",
+    "keywords": ["infraestrutura", "ETL", "governança"],
+    "affiliation": "[PREENCHA]",
+    "area": "[PREENCHA]",
+    "photo": "assets/img/team/p4.svg",
+    "email": "",
+    "lattes": "",
+    "orcid": "",
+    "scholar": "",
+    "github": ""
+  },
+  {
+    "name": "[PESQUISADOR(A) 5]",
+    "role": "Pesquisador(a)",
+    "bio": "[PREENCHA]",
+    "keywords": ["bioestatística", "métodos", "reprodutibilidade"],
+    "affiliation": "[PREENCHA]",
+    "area": "[PREENCHA]",
+    "photo": "assets/img/team/p5.svg",
+    "email": "",
+    "lattes": "",
+    "orcid": "",
+    "scholar": "",
+    "github": ""
+  }
+]

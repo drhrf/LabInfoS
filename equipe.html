@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+
+  <title>Equipe — LabInfoS</title>
+  <meta name="description" content="Equipe do Laboratório de Informática em Saúde (LabInfoS)." />
+
+  <link rel="icon" href="assets/img/capa.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script defer src="assets/js/main.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="brand" href="./index.html" aria-label="Ir para a página inicial do LabInfoS">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">
+          <span class="brand-name">LabInfoS</span>
+          <span class="brand-sub">Laboratório de Informática em Saúde</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" data-nav-toggle>
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+      </button>
+
+      <nav class="nav" data-nav>
+        <a class="nav-link" href="./index.html">Início</a>
+        <a class="nav-link" href="./publicacoes.html">Publicações</a>
+        <a class="nav-link is-active" href="./equipe.html">Equipe</a>
+        <a class="nav-link" href="./nec.html">NEC</a>
+        <a class="nav-link" href="https://drhrf.github.io/mynecreports/" target="_blank" rel="noopener noreferrer">mynecreports</a>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Alternar tema (claro/escuro)">
+          Tema
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo" class="page">
+    <section class="page-hero">
+      <div class="container">
+        <p class="kicker">Pessoas</p>
+        <h1>Equipe</h1>
+
+        <!-- PREENCHA AQUI: descrever como o laboratório se organiza (coordenação, estudantes, colaboradores, etc.) -->
+        <p class="lead">[INSIRA AQUI um texto curto: “A equipe reúne docentes, pós-docs, estudantes e colaboradores…”.]</p>
+
+        <p class="muted">
+          Os perfis abaixo são carregados de <code>data/team.json</code>. As imagens estão em <code>assets/img/team/</code>.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="team-controls" role="search" aria-label="Buscar pessoas">
+          <label class="input">
+            <span class="input-label">Buscar</span>
+            <input id="teamQuery" type="search" placeholder="Nome, área, palavras-chave…" autocomplete="off" />
+          </label>
+
+          <label class="input">
+            <span class="input-label">Categoria</span>
+            <select id="teamRole">
+              <option value="">Todas</option>
+            </select>
+          </label>
+
+          <button class="btn ghost" type="button" id="teamReset">Limpar</button>
+        </div>
+
+        <div class="results-meta">
+          <span id="teamCount">—</span>
+          <span class="muted">pessoas encontradas</span>
+        </div>
+
+        <div id="teamGrid" class="team-grid" aria-live="polite"></div>
+
+        <div class="hint">
+          <p class="muted">
+            Dica prática: para trocar as fotos, basta substituir os SVGs por JPG/PNG com o mesmo nome (ex.: <code>p1.jpg</code>) e ajustar o caminho no JSON.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <p class="footer-brand"><strong>LabInfoS</strong> — Laboratório de Informática em Saúde</p>
+        <p class="muted">© <span id="year"></span></p>
+      </div>
+
+      <div class="footer-right">
+        <a href="./index.html">Início</a>
+        <a href="./publicacoes.html">Publicações</a>
+        <a href="./nec.html">NEC</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

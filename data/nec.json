@@ -1,0 +1,27 @@
+{
+  "email": "[PREENCHA: email do NEC]",
+  "formUrl": "[PREENCHA: link do formulário de solicitação]",
+  "scopeNote": "[PREENCHA: nota curta sobre escopo, prazos, priorização, etc.]",
+  "services": [
+    {
+      "title": "Desenho de estudo e metodologia",
+      "description": "[PREENCHA: exemplos de entregáveis: protocolo, plano de análise, registro, etc.]",
+      "note": "Ex.: PRISMA / STROBE / CONSORT • validação • análise estatística"
+    },
+    {
+      "title": "Ciência de dados aplicada",
+      "description": "[PREENCHA: modelagem, pipelines, ETL, dashboards, auditoria de dados, etc.]",
+      "note": "Ex.: reprodutibilidade • versionamento • documentação"
+    },
+    {
+      "title": "Escrita científica e submissão",
+      "description": "[PREENCHA: estruturação, revisão crítica, resposta a pareceres, adequação a revista.]",
+      "note": "Ex.: checagem de consistência • figuras • transparência"
+    }
+  ],
+  "howWeWork": [
+    "[PREENCHA: Parágrafo 1: como acontece a triagem e o levantamento de objetivos.]",
+    "[PREENCHA: Parágrafo 2: como vocês definem escopo, entregáveis, prazos e critérios de qualidade.]",
+    "[PREENCHA: Parágrafo 3: como é a comunicação (reuniões, relatórios, versionamento, handoff).]"
+  ]
+}

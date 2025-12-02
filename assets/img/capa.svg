@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-label="Capa LabInfoS (placeholder)">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0ea5e9" stop-opacity="0.90"/>
+      <stop offset="1" stop-color="#7c3aed" stop-opacity="0.88"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="30%" cy="30%" r="70%">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="1000" fill="#0b0d12"/>
+  <rect width="1600" height="1000" fill="url(#bg)" opacity="0.55"/>
+  <circle cx="420" cy="260" r="520" fill="url(#glow)"/>
+  <circle cx="1250" cy="720" r="560" fill="url(#glow)" opacity="0.75"/>
+
+  <g opacity="0.95">
+    <path d="M180 760 C 360 620, 520 900, 720 760 S 1100 620, 1400 760" fill="none" stroke="#ffffff" stroke-opacity="0.22" stroke-width="6"/>
+    <path d="M190 725 C 380 590, 520 860, 720 725 S 1100 590, 1410 725" fill="none" stroke="#ffffff" stroke-opacity="0.18" stroke-width="5"/>
+  </g>
+
+  <g fill="#ffffff">
+    <text x="90" y="150" font-size="64" font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial" font-weight="800" opacity="0.95">LabInfoS</text>
+    <text x="90" y="210" font-size="28" font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial" font-weight="600" opacity="0.75">Laboratório de Informática em Saúde</text>
+    <text x="90" y="270" font-size="20" font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial" font-weight="500" opacity="0.70">[Substitua este SVG por uma foto real quando quiser]</text>
+  </g>
+
+  <g opacity="0.35">
+    <circle cx="1160" cy="250" r="10" fill="#ffffff"/>
+    <circle cx="1210" cy="310" r="7" fill="#ffffff"/>
+    <circle cx="1315" cy="285" r="8" fill="#ffffff"/>
+    <circle cx="1275" cy="220" r="6" fill="#ffffff"/>
+    <circle cx="1380" cy="340" r="9" fill="#ffffff"/>
+  </g>
+</svg>

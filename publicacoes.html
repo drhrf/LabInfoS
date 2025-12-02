@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+
+  <title>Publicações — LabInfoS</title>
+  <meta name="description" content="Publicações do Laboratório de Informática em Saúde (LabInfoS)." />
+
+  <link rel="icon" href="assets/img/capa.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script defer src="assets/js/main.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="brand" href="./index.html" aria-label="Ir para a página inicial do LabInfoS">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">
+          <span class="brand-name">LabInfoS</span>
+          <span class="brand-sub">Laboratório de Informática em Saúde</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" data-nav-toggle>
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+      </button>
+
+      <nav class="nav" data-nav>
+        <a class="nav-link" href="./index.html">Início</a>
+        <a class="nav-link is-active" href="./publicacoes.html">Publicações</a>
+        <a class="nav-link" href="./equipe.html">Equipe</a>
+        <a class="nav-link" href="./nec.html">NEC</a>
+        <a class="nav-link" href="https://drhrf.github.io/mynecreports/" target="_blank" rel="noopener noreferrer">mynecreports</a>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Alternar tema (claro/escuro)">
+          Tema
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo" class="page">
+    <section class="page-hero">
+      <div class="container">
+        <p class="kicker">Produção científica</p>
+        <h1>Publicações</h1>
+        <p class="lead">A lista abaixo é carregada de <code>data/publications.json</code>. Você edita uma vez, o site atualiza sozinho.</p>
+
+        <!-- PREENCHA AQUI (opcional): política de autoria, repositórios, preprints, ORCID do lab etc. -->
+        <p class="muted">[INSIRA AQUI um texto curto opcional: “Preferimos DOIs; quando não houver, usamos URL. Preprints são bem-vindos”, etc.]</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="pub-controls" role="search" aria-label="Filtrar publicações">
+          <label class="input">
+            <span class="input-label">Buscar</span>
+            <input id="pubQuery" type="search" placeholder="Título, autor, periódico, palavra-chave…" autocomplete="off" />
+          </label>
+
+          <label class="input">
+            <span class="input-label">Ano</span>
+            <select id="pubYear">
+              <option value="">Todos</option>
+            </select>
+          </label>
+
+          <label class="input">
+            <span class="input-label">Tipo</span>
+            <select id="pubType">
+              <option value="">Todos</option>
+            </select>
+          </label>
+
+          <button class="btn ghost" type="button" id="pubReset">Limpar</button>
+        </div>
+
+        <div class="results-meta">
+          <span id="pubCount">—</span>
+          <span class="muted">publicações encontradas</span>
+        </div>
+
+        <div id="pubList" class="pub-list" aria-live="polite"></div>
+
+        <div class="hint">
+          <p class="muted">
+            Dica nerd: se você preferir gerir isso via BibTeX, dá para exportar e converter para JSON depois (ou eu adapto o carregador para ler um <code>.bib</code>).
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <p class="footer-brand"><strong>LabInfoS</strong> — Laboratório de Informática em Saúde</p>
+        <p class="muted">© <span id="year"></span></p>
+      </div>
+
+      <div class="footer-right">
+        <a href="./index.html">Início</a>
+        <a href="./equipe.html">Equipe</a>
+        <a href="./nec.html">NEC</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

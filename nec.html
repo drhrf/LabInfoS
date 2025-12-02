@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+
+  <title>NEC — Núcleo Bertrand Russell para Excelência Científica</title>
+  <meta name="description" content="NEC: Núcleo Bertrand Russell para Excelência Científica — consultoria, métodos, ciência de dados e apoio a projetos." />
+
+  <link rel="icon" href="assets/img/capa.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script defer src="assets/js/main.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="brand" href="./index.html" aria-label="Ir para a página inicial do LabInfoS">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">
+          <span class="brand-name">LabInfoS</span>
+          <span class="brand-sub">Laboratório de Informática em Saúde</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" data-nav-toggle>
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+      </button>
+
+      <nav class="nav" data-nav>
+        <a class="nav-link" href="./index.html">Início</a>
+        <a class="nav-link" href="./publicacoes.html">Publicações</a>
+        <a class="nav-link" href="./equipe.html">Equipe</a>
+        <a class="nav-link is-active" href="./nec.html">NEC</a>
+        <a class="nav-link" href="https://drhrf.github.io/mynecreports/" target="_blank" rel="noopener noreferrer">mynecreports</a>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Alternar tema (claro/escuro)">
+          Tema
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo" class="page">
+    <section class="page-hero">
+      <div class="container">
+        <p class="kicker">Núcleo Bertrand Russell para Excelência Científica</p>
+        <h1>NEC</h1>
+
+        <!-- PREENCHA AQUI: posicionamento do NEC e como ele se conecta ao LabInfoS -->
+        <p class="lead">
+          [INSIRA AQUI um pitch claro (4–6 linhas): o que é o NEC, para quem é, quais problemas resolve, e como o contato acontece.]
+        </p>
+
+        <p class="muted">O conteúdo estruturado desta página é carregado de <code>data/nec.json</code>.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid cards-3" id="necServices">
+          <!-- serviços carregados de nec.json -->
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="split">
+          <div>
+            <h2>Como trabalhamos</h2>
+            <div class="prose" id="necHowWeWork">
+              <!-- texto carregado de nec.json -->
+            </div>
+          </div>
+
+          <aside class="panel">
+            <h3>Solicitar apoio</h3>
+            <p class="muted">PREENCHA em <code>data/nec.json</code> (e, se preferir, também em <code>data/site.json</code>).</p>
+            <div class="contact-block">
+              <div class="contact-item">
+                <span class="contact-label">E-mail</span>
+                <a href="#" data-nec="email">[nec@exemplo.org]</a>
+              </div>
+              <div class="contact-item">
+                <span class="contact-label">Formulário</span>
+                <a href="#" data-nec="formUrl">[link do formulário]</a>
+              </div>
+              <div class="contact-item">
+                <span class="contact-label">Escopo</span>
+                <span data-nec="scopeNote">[o que entra / o que não entra]</span>
+              </div>
+            </div>
+
+            <div class="panel-cta">
+              <a class="btn primary" href="./equipe.html">Ver equipe</a>
+              <a class="btn ghost" href="./publicacoes.html">Ver publicações</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <p class="footer-brand"><strong>LabInfoS</strong> — Laboratório de Informática em Saúde</p>
+        <p class="muted">© <span id="year"></span></p>
+      </div>
+
+      <div class="footer-right">
+        <a href="./index.html">Início</a>
+        <a href="./publicacoes.html">Publicações</a>
+        <a href="./equipe.html">Equipe</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

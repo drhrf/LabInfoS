@@ -1,0 +1,12 @@
+{
+  "email": "[PREENCHA: email do laboratório]",
+  "address": "[PREENCHA: endereço físico]",
+  "institution": "[PREENCHA: instituição / departamento / programa]",
+  "social": [
+    { "label": "Relatórios (mynecreports)", "url": "https://github.com/drhrf/mynecreports" },
+    { "label": "GitHub", "url": "https://github.com/drhrf" },
+    { "label": "Lattes", "url": "[PREENCHA: link do grupo/projeto]" },
+    { "label": "OSF", "url": "[PREENCHA: link OSF, se houver]" }
+  ],
+  "metrics": { "publications": 0, "people": 0, "projects": 0 }
+}
