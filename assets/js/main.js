@@ -235,7 +235,10 @@
         const links = document.createElement("div");
         links.className = "pub-links";
 
-        const doiUrl = p.doi ? `https://doi.org/${String(p.doi).replace(/^https?:\/\/doi\.org\//, "").trim()}` : null;
+        const doiRaw = p.doi ? String(p.doi).trim() : "";
+        const doiUrl = doiRaw
+        ? (/^https?:\/\//i.test(doiRaw) ? doiRaw : `https://doi.org/${doiRaw.replace(/^doi:\s*/i, "")}`)
+        : null;
 
         const l1 = makeLink("DOI", doiUrl);
         const l2 = makeLink("PDF", p.pdf);

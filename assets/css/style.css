@@ -85,13 +85,13 @@ code{
 
 .brand{ display:flex; align-items:center; gap: 12px; min-width: 220px; }
 .brand-mark{
-  width: 44px; height: 44px; border-radius: 14px;
-  background:
-    radial-gradient(12px 12px at 30% 30%, rgba(125,211,252,.9), transparent 60%),
-    radial-gradient(16px 16px at 75% 70%, rgba(167,139,250,.85), transparent 65%),
-    linear-gradient(135deg, color-mix(in oklab, var(--card) 88%, black), color-mix(in oklab, var(--card) 60%, transparent));
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
   border: 1px solid color-mix(in oklab, var(--line) 70%, transparent);
-  box-shadow: 0 12px 34px rgba(0,0,0,.25);
+  box-shadow: 0 12px 34px rgba(0,0,0,.12);
+
+  background: url("../img/logo.png") center / contain no-repeat;
 }
 .brand-name{ font-weight: 800; letter-spacing: .2px; }
 .brand-sub{ font-size: .86rem; color: var(--muted); display:block; margin-top: 1px; }
@@ -244,7 +244,7 @@ h1{ font-size: clamp(2rem, 3.2vw, 3rem); line-height: 1.05; margin: 12px 0 10px;
   background: linear-gradient(180deg, color-mix(in oklab, var(--card) 84%, transparent), color-mix(in oklab, var(--card) 72%, transparent));
   box-shadow: var(--shadow);
 }
-.hero-image{ width:100%; height:100%; object-fit: cover; display:block; min-height: 320px; }
+.hero-image{ width:100%; height:100%; object-fit: contain; display:block; object-position: center; padding: 28px !important; }
 .hero-card-overlay{
   position:absolute;
   left: 14px; right: 14px; bottom: 14px;
