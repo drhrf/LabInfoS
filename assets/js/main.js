@@ -460,7 +460,7 @@
         card.className = "card";
         card.innerHTML = `
           <h3>${safeText(s.title) || "[SERVIÇO]"}</h3>
-          <p>${safeText(s.description) || "[PREENCHA: descrição do serviço.]"}</p>
+          <p class="justifyed">${safeText(s.description) || "[PREENCHA: descrição do serviço.]"}</p>
           <p class="card-meta">${safeText(s.note) || ""}</p>
         `;
         services.appendChild(card);
@@ -472,6 +472,7 @@
       how.innerHTML = "";
       (nec.howWeWork || []).forEach((p) => {
         const para = document.createElement("p");
+        para.className = "justifyed";
         para.textContent = safeText(p);
         how.appendChild(para);
       });

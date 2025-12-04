@@ -244,7 +244,7 @@ h1{ font-size: clamp(2rem, 3.2vw, 3rem); line-height: 1.05; margin: 12px 0 10px;
   background: linear-gradient(180deg, color-mix(in oklab, var(--card) 84%, transparent), color-mix(in oklab, var(--card) 72%, transparent));
   box-shadow: var(--shadow);
 }
-.hero-image{ width:100%; height:100%; object-fit: contain; display:block; object-position: center; padding: 28px !important; }
+.hero-image{ width:100%; height:100%; object-fit: contain; display:block; object-position: center; padding: 10px !important; }
 .hero-card-overlay{
   position:absolute;
   left: 14px; right: 14px; bottom: 14px;
@@ -501,4 +501,10 @@ input[type="search"]:focus, select:focus{ box-shadow: var(--focus); }
   outline: none;
   box-shadow: var(--focus);
   border-radius: 12px;
+}
+
+.justifyed{
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
 }

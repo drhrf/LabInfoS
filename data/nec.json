@@ -1,27 +1,27 @@
 {
-  "email": "[PREENCHA: email do NEC]",
+  "email": "hercules.freitas@uerj.br",
   "formUrl": "[PREENCHA: link do formulário de solicitação]",
-  "scopeNote": "[PREENCHA: nota curta sobre escopo, prazos, priorização, etc.]",
+  "scopeNote": "Sua solicitação será respondida em, até, 7 dias úteis.",
   "services": [
     {
-      "title": "Desenho de estudo e metodologia",
-      "description": "[PREENCHA: exemplos de entregáveis: protocolo, plano de análise, registro, etc.]",
-      "note": "Ex.: PRISMA / STROBE / CONSORT • validação • análise estatística"
+        "title": "Desenho de estudo e metodologia",
+        "description": "Apoio desde a formulação da pergunta e definição de desfechos até a construção do protocolo completo: delineamento, amostragem, variáveis, instrumentos, plano de coleta e cronograma. Entregáveis típicos incluem protocolo estruturado, plano de análise estatística (SAP), estratégia de controle de viés/confundimento, cálculo amostral e checagem de aderência a diretrizes (PRISMA/STROBE/CONSORT), incluindo plano de registro (OSF/clinicaltrials quando aplicável).",
+        "note": "PRISMA / STROBE / CONSORT • validação • análise estatística"
     },
     {
-      "title": "Ciência de dados aplicada",
-      "description": "[PREENCHA: modelagem, pipelines, ETL, dashboards, auditoria de dados, etc.]",
-      "note": "Ex.: reprodutibilidade • versionamento • documentação"
+        "title": "Ciência de dados aplicada",
+        "description": "Desenvolvimento e auditoria de pipelines reprodutíveis para limpeza, integração e análise de dados (ETL), com foco em qualidade e rastreabilidade. Inclui modelagem estatística e preditiva, avaliação/validação (interna e externa quando possível), relatórios automatizados, dashboards e documentação técnica para manutenção e transferência, além de revisão crítica de banco de dados e dicionário de variáveis.",
+        "note": "reprodutibilidade • versionamento • documentação"
     },
     {
-      "title": "Escrita científica e submissão",
-      "description": "[PREENCHA: estruturação, revisão crítica, resposta a pareceres, adequação a revista.]",
-      "note": "Ex.: checagem de consistência • figuras • transparência"
+        "title": "Escrita científica e submissão",
+        "description": "Estruturação do manuscrito do zero ou revisão profunda de rascunhos, garantindo coerência entre objetivos, métodos, resultados e conclusões. Inclui edição científica, checagem de consistência (tabelas/figuras/números), adequação ao escopo da revista, suporte na montagem de figuras e materiais suplementares e preparação de carta ao editor e respostas a pareceres com rastreabilidade das alterações.",
+        "note": "checagem de consistência • figuras • transparência"
     }
-  ],
-  "howWeWork": [
-    "[PREENCHA: Parágrafo 1: como acontece a triagem e o levantamento de objetivos.]",
-    "[PREENCHA: Parágrafo 2: como vocês definem escopo, entregáveis, prazos e critérios de qualidade.]",
-    "[PREENCHA: Parágrafo 3: como é a comunicação (reuniões, relatórios, versionamento, handoff).]"
-  ]
+],
+"howWeWork": [
+    "A triagem começa com uma conversa breve e objetiva para entender a pergunta, os dados disponíveis (ou a necessidade de coleta), o prazo e o nível de maturidade do projeto. Em seguida, fazemos um diagnóstico técnico: definimos o problema em termos operacionais, identificamos lacunas metodológicas e riscos (viés, viabilidade, qualidade de dados) e alinhamos o que seria um resultado “publicável” ou “implementável” para aquele contexto.",
+    "Com o diagnóstico em mãos, formalizamos o escopo em entregáveis claros (por exemplo: protocolo + SAP, pipeline de dados + relatório técnico, ou manuscrito + resposta a pareceres), definimos marcos e prazos realistas e descrevemos critérios de qualidade (reprodutibilidade, validação, aderência a diretrizes e transparência). Quando aplicável, sugerimos opções de registro, estratégias de validação e um plano mínimo de governança de dados para reduzir retrabalho e aumentar a robustez do estudo.",
+    "A comunicação é feita por checkpoints curtos e materiais escritos: relatórios técnicos, versões controladas (Git) e documentação para que o projeto continue andando sem dependência do consultor. Mantemos um histórico claro do que mudou e por quê, entregamos arquivos organizados (dados, scripts, outputs e figuras) e fazemos o handoff final com instruções de execução e leitura, para que o grupo consiga manter, atualizar e defender o trabalho com segurança."
+]
 }
