@@ -440,8 +440,14 @@
 
       if (el.tagName === "A" && key === "formUrl") {
         const url = safeText(value);
-        el.textContent = url || "[link do formulário]";
+        // Keep the href as the URL from JSON, but prefer a friendly label
+        // for the link text instead of printing the raw URL.
         el.href = url || "#";
+        const currentText = (el.textContent || "").trim();
+        const isPlaceholder = !currentText || /link do formulário|\[link|https?:\/\//i.test(currentText);
+        if (isPlaceholder) {
+          el.textContent = url ? "Solicite aqui!" : "[link do formulário]";
+        }
         if (url && isExternalUrl(url)) {
           el.target = "_blank";
           el.rel = "noopener noreferrer";

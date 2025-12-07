@@ -1,12 +1,12 @@
 {
-  "email": "hercules.freitas@uerj.br",
+  "email": "labinfos.uerj@gmail.com",
   "address": "FCM – Jardim Flamboyant, 28905-320, Cabo Frio/RJ",
   "institution": "UERJ – Universidade do Estado do Rio de Janeiro",
   "social": [
     { "label": "FCM", "url": "https://fcm.uerj.br/" },
     { "label": "DGP/CNPq", "url": "dgp.cnpq.br/dgp/espelhogrupo/7893660876727978" },
     { "label": "LinkedIn", "url": "https://www.linkedin.com/in/proffreitashr/" },
-    { "label": "Relatórios (NECreports)", "url": "https://github.com/drhrf/mynecreports" }
+    { "label": "Relatórios (NECreports)", "url": "https://drhrf.github.io/mynecreports/" }
   ],
   "metrics": { "publications": 6, "people": 6, "projects": 5 }
 }
