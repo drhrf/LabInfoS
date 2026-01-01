@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
+
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="color-scheme" content="light dark" />
@@ -16,6 +17,19 @@
 </head>
 
 <body>
+
+  <div id="google_translate_element" style="position:fixed; bottom:12px; right:12px; z-index:9999;"></div>
+
+  <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        { pageLanguage: 'pt', layout: google.translate.TranslateElement.InlineLayout.SIMPLE },
+        'google_translate_element'
+      );
+    }
+  </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
   <header class="site-header" data-header>
