@@ -24,6 +24,204 @@
   <link rel="apple-touch-icon" href="assets/img/capa-192.png">
   <link rel="stylesheet" href="assets/css/style.css" />
   <script defer src="assets/js/main.js"></script>
+
+<!-- WebR Console styles (scoped so they don't bleed into the rest of the page) -->
+  <style>
+    /* ── WebR Console Section ──────────────────────────────────────────── */
+    .webr-section {
+      padding: 3rem 0 4rem;
+    }
+
+    .webr-section .section-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.45;
+      margin-bottom: 0.4rem;
+    }
+
+    .webr-section h2 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+    }
+
+    .webr-section .webr-description {
+      opacity: 0.7;
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+      max-width: 60ch;
+    }
+
+    /* Terminal wrapper */
+    .webr-console {
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.13);
+      font-family: 'Menlo', 'Consolas', 'Liberation Mono', monospace;
+      font-size: 0.85rem;
+      background: #1e1e2e;
+      color: #cdd6f4;
+    }
+
+    /* Title bar */
+    .webr-titlebar {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1rem;
+      background: #181825;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .webr-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+    .webr-dot.red    { background: #f38ba8; }
+    .webr-dot.yellow { background: #f9e2af; }
+    .webr-dot.green  { background: #a6e3a1; }
+
+    .webr-titlebar-label {
+      margin-left: auto;
+      font-size: 0.72rem;
+      opacity: 0.4;
+      letter-spacing: 0.05em;
+    }
+
+    /* Output area */
+    .webr-output {
+      padding: 1rem 1.2rem 0.5rem;
+      min-height: 120px;
+      max-height: 260px;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+      line-height: 1.55;
+      color: #cdd6f4;
+    }
+
+    .webr-output .webr-stdout { color: #cdd6f4; }
+    .webr-output .webr-stderr { color: #f38ba8; }
+    .webr-output .webr-info   { color: #89dceb; font-style: italic; }
+
+    /* Input row */
+    .webr-input-row {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 0.55rem 1.2rem;
+      background: #181825;
+    }
+
+    .webr-prompt {
+      color: #89b4fa;
+      font-weight: 700;
+      margin-right: 0.5rem;
+      user-select: none;
+      flex-shrink: 0;
+    }
+
+    .webr-input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      outline: none;
+      color: #cdd6f4;
+      font-family: inherit;
+      font-size: inherit;
+      line-height: 1.5;
+      caret-color: #89b4fa;
+    }
+
+    .webr-run-btn {
+      background: #89b4fa;
+      color: #1e1e2e;
+      border: none;
+      border-radius: 5px;
+      padding: 0.3rem 0.85rem;
+      font-family: inherit;
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.15s, opacity 0.15s;
+      flex-shrink: 0;
+      margin-left: 0.75rem;
+    }
+    .webr-run-btn:hover:not(:disabled)  { background: #b4d0fe; }
+    .webr-run-btn:disabled              { opacity: 0.45; cursor: default; }
+
+    /* Status badge */
+    .webr-status {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+      margin-top: 0.7rem;
+      opacity: 0.6;
+    }
+
+    .webr-status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #f9e2af;
+      animation: webr-pulse 1.4s ease-in-out infinite;
+      flex-shrink: 0;
+    }
+
+    .webr-status-dot.ready  { background: #a6e3a1; animation: none; }
+    .webr-status-dot.error  { background: #f38ba8; animation: none; }
+
+    @keyframes webr-pulse {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.3; }
+    }
+
+    /* Example snippets */
+    .webr-examples {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-top: 1rem;
+    }
+
+    .webr-example-btn {
+      background: rgba(137,180,250,0.1);
+      border: 1px solid rgba(137,180,250,0.25);
+      color: #89b4fa;
+      border-radius: 20px;
+      padding: 0.25rem 0.75rem;
+      font-family: 'Menlo', 'Consolas', monospace;
+      font-size: 0.78rem;
+      cursor: pointer;
+      transition: background 0.15s, border-color 0.15s;
+    }
+    .webr-example-btn:hover { background: rgba(137,180,250,0.22); border-color: rgba(137,180,250,0.5); }
+
+    .webr-disclaimer {
+      font-size: 0.75rem;
+      opacity: 0.4;
+      margin-top: 0.65rem;
+    }
+
+    #webr-plot-area {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.13);
+    }
+
+    #webr-canvas {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }
+
+  </style>
 </head>
 
 <body>
@@ -136,6 +334,80 @@
         </div>
       </div>
     </section>
+
+<!-- ══════════════════════════════════════════════════════════════════
+         WebR — Console R interativo
+         ══════════════════════════════════════════════════════════════════ -->
+    <section class="section webr-section">
+      <div class="container">
+        <p class="section-label">Ferramenta interativa</p>
+        <h2>Console R no navegador</h2>
+        <p class="webr-description">
+          Experimente análises em R diretamente aqui, sem instalar nada.
+          O ambiente é executado localmente no seu navegador via WebAssembly.
+        </p>
+
+        <div class="webr-console" role="region" aria-label="Console R interativo">
+          <div class="webr-titlebar" aria-hidden="true">
+            <span class="webr-dot red"></span>
+            <span class="webr-dot yellow"></span>
+            <span class="webr-dot green"></span>
+            <span class="webr-titlebar-label">R via WebR</span>
+          </div>
+
+          <div class="webr-output" id="webr-output" aria-live="polite" aria-label="Saída do console R">
+            <span class="webr-info">Inicializando R… isso pode levar alguns segundos.</span>
+          </div>
+
+          <div class="webr-input-row">
+            <span class="webr-prompt" aria-hidden="true">&gt;</span>
+            <input
+              class="webr-input"
+              id="webr-input"
+              type="text"
+              autocomplete="off"
+              autocorrect="off"
+              autocapitalize="off"
+              spellcheck="false"
+              placeholder="Digite um comando R e pressione Enter ou clique em Executar"
+              disabled
+              aria-label="Entrada de código R"
+            />
+            <button class="webr-run-btn" id="webr-run-btn" disabled aria-label="Executar código R">
+              Executar
+            </button>
+          </div>
+        </div>
+
+        <div class="webr-status" id="webr-status" aria-live="polite">
+          <span class="webr-status-dot" id="webr-status-dot"></span>
+          <span id="webr-status-text">Carregando WebR…</span>
+        </div>
+
+        <div class="webr-examples" id="webr-examples" aria-label="Exemplos de código R">
+          <span style="font-size:0.78rem; opacity:0.5; align-self:center;">Exemplos:</span>
+          <button class="webr-example-btn" data-code="summary(c(1,2,3,4,5,6,7,8,9,10))">summary()</button>
+          <button class="webr-example-btn" data-code="x <- rnorm(100); mean(x)">rnorm()</button>
+          <button class="webr-example-btn" data-code="table(sample(c('A','B','C'), 30, replace=TRUE))">table()</button>
+          <button class="webr-example-btn" data-code="cor(1:10, c(2,4,3,5,7,6,8,9,10,11))">cor()</button>
+          <button class="webr-example-btn" data-code="t.test(rnorm(20, mean=5), rnorm(20, mean=5.5))">t.test()</button>
+        </div>
+
+        <p class="webr-disclaimer">
+          Os cálculos ocorrem inteiramente no seu dispositivo. Nenhum dado é enviado a servidores externos.
+        </p>
+
+        <div id="webr-plot-area" style="display:none; margin-top:1rem;">
+  <button id="webr-plot-toggle" class="webr-example-btn" style="margin-bottom:0.5rem;">
+    📊 Mostrar gráfico
+  </button>
+  <canvas id="webr-canvas" style="display:none; border-radius:8px; max-width:100%;"></canvas>
+  </div>
+
+      </div>
+    </section>
+    <!-- ══ fim WebR ══ -->
+
   </main>
 
   <footer class="footer">
@@ -152,5 +424,151 @@
       </div>
     </div>
   </footer>
+
+<!-- ══════════════════════════════════════════════════════════════════
+       WebR bootstrap — loaded as an ES module
+       ══════════════════════════════════════════════════════════════════ -->
+  <script type="module">
+  import { WebR } from 'https://webr.r-wasm.org/latest/webr.mjs';
+
+  const outputEl   = document.getElementById('webr-output');
+  const inputEl    = document.getElementById('webr-input');
+  const runBtn     = document.getElementById('webr-run-btn');
+  const statusDot  = document.getElementById('webr-status-dot');
+  const statusText = document.getElementById('webr-status-text');
+  const exampleBtns = document.querySelectorAll('.webr-example-btn');
+  const plotArea   = document.getElementById('webr-plot-area');
+  const plotCanvas = document.getElementById('webr-canvas');
+  const plotToggle = document.getElementById('webr-plot-toggle');
+
+  const history = [];
+  let histIdx = -1;
+  let plotStarted = false;
+
+  function appendOutput(text, cls = 'webr-stdout') {
+    const info = outputEl.querySelector('.webr-info');
+    if (info) info.remove();
+    const span = document.createElement('span');
+    span.className = cls;
+    span.textContent = text;
+    outputEl.appendChild(span);
+    outputEl.scrollTop = outputEl.scrollHeight;
+  }
+
+  function setStatus(state, label) {
+    statusDot.className = 'webr-status-dot ' + state;
+    statusText.textContent = label;
+  }
+
+  function setReady(ready) {
+    inputEl.disabled = !ready;
+    runBtn.disabled  = !ready;
+    exampleBtns.forEach(b => b.disabled = !ready);
+  }
+
+  plotToggle.addEventListener('click', () => {
+    const visible = plotCanvas.style.display !== 'none';
+    plotCanvas.style.display = visible ? 'none' : 'block';
+    plotToggle.textContent = visible ? '📊 Mostrar gráfico' : '📊 Ocultar gráfico';
+  });
+
+  // ── Init WebR ─────────────────────────────────────────────────────
+  const webR = new WebR();
+  await webR.init();
+
+  // Start the output reader loop — runs forever in the background
+  (async () => {
+    for (;;) {
+      const msg = await webR.read();
+      switch (msg.type) {
+        case 'stdout':
+          appendOutput(msg.data + '\n', 'webr-stdout');
+          break;
+        case 'stderr':
+          appendOutput(msg.data + '\n', 'webr-stderr');
+          break;
+        case 'canvas': {
+  const showPlot = () => {
+    plotArea.style.display   = 'block';
+    plotCanvas.style.display = 'block';
+    plotToggle.textContent   = '📊 Ocultar gráfico';
+  };
+
+  if (msg.data.event === 'canvasNewPage') {
+  plotStarted = false;
+} else if (msg.data.event === 'canvasImage') {
+  const bmp = msg.data.image;
+  if (!plotStarted) {
+    plotCanvas.width  = bmp.width;
+    plotCanvas.height = bmp.height;
+    const ctx = plotCanvas.getContext('2d');
+    ctx.fillStyle = '#ffffff';
+    ctx.fillRect(0, 0, bmp.width, bmp.height);
+    plotStarted = true;
+  }
+  plotCanvas.getContext('2d').drawImage(bmp, 0, 0);
+  showPlot();
+}
+  break;
+}
+        case 'prompt':
+          // R is ready for the next command
+          setReady(true);
+          setStatus('ready', 'R pronto');
+          break;
+      }
+    }
+  })();
+
+  // Set canvas as the graphics device
+  await webR.evalRVoid('options(device=webr::canvas)');
+
+  setStatus('ready', 'R pronto');
+  setReady(true);
+  outputEl.innerHTML = '';
+  appendOutput(
+    'R rodando via WebR ' + (await webR.evalRString('R.version.string')) + '\n' +
+    'Digite um comando abaixo ou escolha um exemplo.\n\n',
+    'webr-info'
+  );
+
+  // ── Run code ──────────────────────────────────────────────────────
+  async function runCode(code) {
+    code = code.trim();
+    if (!code) return;
+
+    appendOutput('> ' + code + '\n', 'webr-stdout');
+    history.unshift(code);
+    histIdx = -1;
+
+    setReady(false);
+    setStatus('ready', 'Executando…');
+    plotStarted = false;
+
+    // Write to R's stdin — the output loop above handles the response
+    await webR.writeConsole(code + '\n');
+
+    inputEl.value = '';
+    inputEl.focus();
+  }
+
+  // ── Event listeners ───────────────────────────────────────────────
+  runBtn.addEventListener('click', () => runCode(inputEl.value));
+
+  inputEl.addEventListener('keydown', e => {
+    if (e.key === 'Enter')     { e.preventDefault(); runCode(inputEl.value); }
+    if (e.key === 'ArrowUp')   { e.preventDefault(); histIdx = Math.min(histIdx + 1, history.length - 1); inputEl.value = history[histIdx] ?? ''; }
+    if (e.key === 'ArrowDown') { e.preventDefault(); histIdx = Math.max(histIdx - 1, -1); inputEl.value = histIdx === -1 ? '' : (history[histIdx] ?? ''); }
+  });
+
+  exampleBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (!btn.dataset.code) return;
+      inputEl.value = btn.dataset.code;
+      inputEl.focus();
+    });
+  });
+</script>
+
 </body>
 </html>
