@@ -551,13 +551,14 @@ input[type="search"]:focus, select:focus{ box-shadow: var(--focus); }
 }
 
 .linkedin-button{
- position: fixed;
- top: 100px;
- right: 20px;
- background:#0A66C2;
- color:white;
- padding:10px 14px;
- border-radius:6px;
- text-decoration:none;
- font-weight:600;
+  position: fixed !important;
+  top: 100px !important;
+  right: 20px !important;
+  background:#0A66C2;
+  color:white;
+  padding:10px 14px;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:600;
+  z-index:9999;
 }
