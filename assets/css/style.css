@@ -549,3 +549,15 @@ input[type="search"]:focus, select:focus{ box-shadow: var(--focus); }
 .btn.ghost:focus {
   background: color-mix(in oklab, var(--card) 75%, transparent);
 }
+
+.linkedin-button{
+ position: fixed;
+ top: 100px;
+ right: 20px;
+ background:#0A66C2;
+ color:white;
+ padding:10px 14px;
+ border-radius:6px;
+ text-decoration:none;
+ font-weight:600;
+}
