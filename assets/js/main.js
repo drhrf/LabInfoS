@@ -485,11 +485,26 @@
     }
   }
 
+  function initCarousel() {
+    const slides = document.querySelectorAll(".hero-carousel .carousel-slide");
+    if (slides.length < 2) return;
+
+    let current = 0;
+    const total = slides.length;
+
+    setInterval(() => {
+      slides[current].classList.remove("is-active");
+      current = (current + 1) % total;
+      slides[current].classList.add("is-active");
+    }, 3000);
+  }
+
   async function boot() {
     initYear();
     initTheme();
     initThemeToggle();
     initNav();
+    initCarousel();
 
     try {
       state.site = await loadJSON("data/site.json");
