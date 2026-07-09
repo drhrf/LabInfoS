@@ -8,74 +8,63 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-3MMCZ72V5H');
   </script>
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Página não encontrada — LabInfoS</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <script defer src="assets/js/main.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..700;1,14..32,400..700&display=swap" rel="stylesheet" />
 
   <link rel="icon" href="assets/img/logo.png" type="image/svg+xml">
   <link rel="icon" href="assets/img/capa-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="assets/img/capa-192.png">
-
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script defer src="assets/js/main.js"></script>
 </head>
 <body>
 
-  <div id="google_translate_element" style="position:fixed; bottom:12px; right:12px; z-index:9999;"></div>
-
-  <script>
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement(
-        { pageLanguage: 'pt', layout: google.translate.TranslateElement.InlineLayout.SIMPLE },
-        'google_translate_element'
-      );
-    }
-  </script>
-  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-  <header class="site-header" data-header>
+  <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="./index.html">
+      <a class="brand" href="./index.html" aria-label="Ir para a página inicial do LabInfoS">
         <span class="brand-mark" aria-hidden="true"></span>
         <span class="brand-text">
           <span class="brand-name">LabInfoS</span>
           <span class="brand-sub">Laboratório de Informática em Saúde</span>
         </span>
       </a>
-      <nav class="nav" data-nav>
-        <a class="nav-link" href="./index.html">Início</a>
-        <a class="nav-link" href="./publicacoes.html">Publicações</a>
-        <a class="nav-link" href="./equipe.html">Equipe</a>
-        <a class="nav-link" href="./nec.html">NEC</a>
-      </nav>
+
+      <div class="lang-switcher" aria-label="Seletor de idioma">
+        <a href="#" class="lang-link is-active" data-lang="pt">Português</a>
+        <span class="lang-sep">|</span>
+        <a href="#" class="lang-link" data-lang="en">English</a>
+      </div>
     </div>
   </header>
 
-  <main id="conteudo" class="page">
+  <main id="conteudo">
     <section class="page-hero">
       <div class="container">
-        <p class="kicker">404</p>
+        <p class="section-label">404</p>
         <h1>Página não encontrada</h1>
         <p class="lead">Esse link caiu num buraco de minhoca. Acontece com os melhores.</p>
         <div class="hero-cta">
           <a class="btn primary" href="./index.html">Voltar ao início</a>
-          <a class="btn ghost" href="./publicacoes.html">Ir para publicações</a>
+          <a class="btn ghost" href="./index.html#publicacoes">Ir para publicações</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-left">
-        <p class="footer-brand"><strong>LabInfoS</strong> — Laboratório de Informática em Saúde</p>
-        <p class="muted">© <span id="year"></span></p>
+    <div class="container">
+      <div class="footer-bottom" style="justify-content:center; border-top:none;">
+        <span>&copy; <span id="year"></span> LabInfoS — Laboratório de Informática em Saúde</span>
       </div>
     </div>
   </footer>

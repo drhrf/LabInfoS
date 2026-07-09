@@ -5,16 +5,14 @@
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-3MMCZ72V5H"></script>
   <script>
-   window.dataLayer = window.dataLayer || [];
+    window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-3MMCZ72V5H');
   </script>
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="color-scheme" content="light dark" />
 
   <title>LabInfoS — Laboratório de Informática em Saúde</title>
   <meta name="description" content="Site oficial do Laboratório de Informática em Saúde (LabInfoS): pesquisa, ensino e inovação em dados, computação e saúde." />
@@ -23,6 +21,10 @@
   <meta property="og:description" content="Pesquisa, ensino e inovação em dados, computação e saúde." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/img/capa.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..700;1,14..32,400..700&family=JetBrains+Mono:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet" />
 
   <link rel="icon" href="assets/img/logo.png" type="image/svg+xml">
   <link rel="icon" href="assets/img/capa-32.png" sizes="32x32" type="image/png">
@@ -33,29 +35,22 @@
 
 <body>
 
+  <!-- LinkedIn floating button -->
   <a class="linkedin-button"
-    href="https://www.linkedin.com/in/labinfos-uerj-1337b83b5"
-    target="_blank">
-    LinkedIn
-  </a>
+     href="https://www.linkedin.com/in/labinfos-uerj-1337b83b5"
+     target="_blank"
+     rel="noopener noreferrer"
+     data-i18n="linkedin">LinkedIn</a>
 
-  <div id="google_translate_element" style="position:fixed; bottom:12px; right:12px; z-index:9999;"></div>
+  <!-- Accessibility skip link -->
+  <a class="skip-link" href="#sobre" data-i18n="skip_link">Pular para o conteúdo</a>
 
-  <script>
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement(
-        { pageLanguage: 'pt', layout: google.translate.TranslateElement.InlineLayout.SIMPLE },
-        'google_translate_element'
-      );
-    }
-  </script>
-  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
-
+  <!-- ═══════════════════════════════════════════════════════════════════
+       HEADER
+       ═══════════════════════════════════════════════════════════════════ -->
   <header class="site-header" data-header>
     <div class="container header-inner">
-      <a class="brand" href="./index.html" aria-label="Ir para a página inicial do LabInfoS">
+      <a class="brand" href="#sobre" aria-label="Ir para o topo da página">
         <span class="brand-mark" aria-hidden="true"></span>
         <span class="brand-text">
           <span class="brand-name">LabInfoS</span>
@@ -67,55 +62,57 @@
         <span class="nav-toggle-bars" aria-hidden="true"></span>
       </button>
 
+      <div class="lang-switcher" aria-label="Seletor de idioma">
+        <a href="#" class="lang-link is-active" data-lang="pt">Português</a>
+        <span class="lang-sep">|</span>
+        <a href="#" class="lang-link" data-lang="en">English</a>
+      </div>
+
       <nav class="nav" data-nav>
-        <a class="nav-link is-active" href="./index.html">Início</a>
-        <a class="nav-link" href="./publicacoes.html">Publicações</a>
-        <a class="nav-link" href="./equipe.html">Equipe</a>
-        <a class="nav-link" href="./nec.html">NEC</a>
-        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Alternar tema (claro/escuro)">
-          Tema
-        </button>
+        <a class="nav-link is-active" href="#sobre" data-i18n="nav.sobre">Sobre</a>
+        <a class="nav-link" href="#pesquisa" data-i18n="nav.pesquisa">Pesquisa</a>
+        <a class="nav-link" href="#equipe" data-i18n="nav.equipe">Equipe</a>
+        <a class="nav-link" href="#publicacoes" data-i18n="nav.publicacoes">Publicações</a>
+        <a class="nav-link" href="#nec" data-i18n="nav.nec">NEC</a>
+        <a class="nav-link" href="#console" data-i18n="nav.console">Console R</a>
+        <a class="nav-link" href="#contato" data-i18n="nav.contato">Contato</a>
       </nav>
     </div>
   </header>
 
-  <main id="conteudo">
-    <section class="hero">
-      <div class="hero-bg" aria-hidden="true"></div>
+  <main>
+    <!-- ═════════════════════════════════════════════════════════════════
+         SEÇÃO 1: SOBRE
+         ═════════════════════════════════════════════════════════════════ -->
+    <section id="sobre" class="hero">
       <div class="container hero-inner">
         <div class="hero-copy">
-          <p class="kicker">Informática em saúde • Ciência de dados • Pesquisa translacional</p>
-          <h1>LabInfoS — fazendo ciênca para a vida!</h1>
-
-          <!-- PREENCHA AQUI: um parágrafo curto (2–4 linhas) com a identidade do laboratório -->
-          <p class="justifyed">
-            LabInfoS é um laboratório sediado no campus Cabo Frio da Universidade do Estado do Rio de Janeiro (UERJ). 
-            Nossa missão é usar tecnologia para gerar conhecimento científico com potencial de melhorar a saúde humana.
-          </p>
+          <p class="kicker" data-i18n="hero.kicker">Informática em saúde • Ciência de dados • Pesquisa translacional</p>
+          <h1 data-i18n="hero.title">LabInfoS — fazendo ciência para a vida!</h1>
+          <p class="lead justifyed" data-i18n="hero.lead">LabInfoS é um laboratório sediado no campus Cabo Frio da Universidade do Estado do Rio de Janeiro (UERJ). Nossa missão é usar tecnologia para gerar conhecimento científico com potencial de melhorar a saúde humana.</p>
 
           <div class="hero-cta">
-            <a class="btn primary" href="./publicacoes.html">Ver publicações</a>
-            <a class="btn ghost" href="./equipe.html">Conhecer a equipe</a>
+            <a class="btn primary" href="#publicacoes" data-i18n="hero.cta_pubs">Ver publicações</a>
+            <a class="btn ghost" href="#equipe" data-i18n="hero.cta_team">Conhecer a equipe</a>
           </div>
 
           <div class="hero-metrics" id="heroMetrics" aria-label="Indicadores do laboratório">
-            <!-- Esses números são carregados de data/site.json -->
             <div class="metric">
               <span class="metric-number" data-metric="publications">—</span>
-              <span class="metric-label">publicações</span>
+              <span class="metric-label" data-i18n="hero.metric_pubs">publicações</span>
             </div>
             <div class="metric">
               <span class="metric-number" data-metric="people">—</span>
-              <span class="metric-label">pesquisadores</span>
+              <span class="metric-label" data-i18n="hero.metric_people">pesquisadores</span>
             </div>
             <div class="metric">
               <span class="metric-number" data-metric="projects">—</span>
-              <span class="metric-label">projetos</span>
+              <span class="metric-label" data-i18n="hero.metric_projects">projetos</span>
             </div>
           </div>
         </div>
 
-        <div class="hero-card hero-carousel" role="img" aria-label="Imagens do laboratório">
+        <div class="hero-card hero-carousel" role="img" data-i18n-aria="carousel.label">
           <div class="carousel-slide is-active">
             <img class="hero-image" src="assets/img/LabInfoS_logo.png" alt="Logo do LabInfoS" />
           </div>
@@ -128,137 +125,660 @@
           <div class="carousel-slide">
             <img class="hero-image" src="assets/img/Team.jpg" alt="Equipe do LabInfoS" />
           </div>
+
+          <!-- Carousel controls overlay -->
+          <div class="carousel-controls">
+            <button class="carousel-btn carousel-prev" aria-label="Slide anterior" data-carousel-prev>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"/>
+              </svg>
+            </button>
+
+            <div class="carousel-dots" data-carousel-dots>
+              <button class="carousel-dot is-active" data-slide="0" aria-label="Slide 1"></button>
+              <button class="carousel-dot" data-slide="1" aria-label="Slide 2"></button>
+              <button class="carousel-dot" data-slide="2" aria-label="Slide 3"></button>
+              <button class="carousel-dot" data-slide="3" aria-label="Slide 4"></button>
+            </div>
+
+            <button class="carousel-btn carousel-pause" aria-label="Pausar carrossel" data-carousel-pause>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="6" y="4" width="4" height="16" rx="1"/>
+                <rect x="14" y="4" width="4" height="16" rx="1"/>
+              </svg>
+            </button>
+          </div>
         </div>
+      </div>
+
+      <div class="section-connector">
+        <a href="#pesquisa" aria-label="Ir para a seção de pesquisa">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </a>
       </div>
     </section>
 
-    <section class="section">
+    <!-- ═════════════════════════════════════════════════════════════════
+         SEÇÃO 2: LINHAS DE PESQUISA
+         ═════════════════════════════════════════════════════════════════ -->
+    <section id="pesquisa" class="section">
       <div class="container">
-        <div class="section-title">
-          <h2>Linhas de pesquisa</h2>
-          <p class="muted">O tipo de coisa que a gente faz quando ninguém está olhando (ou quando está, também).</p>
-          <br>
+        <div class="section-header">
+          <p class="section-label" data-i18n="research.label">O que fazemos</p>
+          <h2 data-i18n="research.title">Linhas de pesquisa</h2>
+          <p data-i18n="research.subtitle">O tipo de coisa que a gente faz quando ninguém está olhando (ou quando está, também).</p>
         </div>
 
         <div class="grid cards-3">
           <article class="card">
-            <h3>Dados clínicos e decisão</h3>
-            <p class="justifyed">Desenvolvimento de modelos preditivos usando métodos estatísticos como machine learning para a identificação de preditores clínicos robustos.</p>
-            <!-- <p class="card-meta">Ex.: predição, triagem, qualidade, desfechos</p> -->
+            <h3 data-i18n="research.card1.title">Dados clínicos e decisão</h3>
+            <p class="justifyed" data-i18n="research.card1.text">Desenvolvimento de modelos preditivos usando métodos estatísticos como machine learning para a identificação de preditores clínicos robustos.</p>
           </article>
 
           <article class="card">
-            <h3>Mecanismos neurodegenerativos</h3>
-            <p class="justifyed">Estudos com humanos e modelos animais para a identificação de marcadores precoces de doenças neurodegenerativas.</p>
-            <!-- <p class="card-meta">Ex.: causalidade, validação externa, risco de viés</p> -->
+            <h3 data-i18n="research.card2.title">Mecanismos neurodegenerativos</h3>
+            <p class="justifyed" data-i18n="research.card2.text">Estudos com humanos e modelos animais para a identificação de marcadores precoces de doenças neurodegenerativas.</p>
           </article>
 
           <article class="card">
-            <h3>Bioquímica da epilepsia</h3>
-            <p class="justifyed">Análise de dados e desenvolvimento de modelos experimentais para a identificação de mecanismos epileptogênicos.</p>
-            <!-- <p class="card-meta">Ex.: LIMS, ETL, auditoria, documentação</p> -->
+            <h3 data-i18n="research.card3.title">Bioquímica da epilepsia</h3>
+            <p class="justifyed" data-i18n="research.card3.text">Análise de dados e desenvolvimento de modelos experimentais para a identificação de mecanismos epileptogênicos.</p>
           </article>
         </div>
       </div>
+
+      <div class="section-connector">
+        <a href="#sobre" aria-label="Ir para a seção anterior" class="connector-up">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"/>
+          </svg>
+        </a>
+        <a href="#equipe" aria-label="Ir para a seção da equipe" class="connector-down">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </a>
+      </div>
     </section>
 
+    <!-- ═════════════════════════════════════════════════════════════════
+         SEÇÃO 3: O QUE ENTREGAMOS
+         ═════════════════════════════════════════════════════════════════ -->
     <section class="section section-alt">
       <div class="container">
         <div class="split">
           <div>
-            <h2>O que o LabInfoS entrega:</h2>
-            <!-- <p class="lead">[PREENCHA: proposta de valor do laboratório em linguagem simples e direta.]</p> -->
+            <p class="section-label" data-i18n="atuacao.label">Atuação</p>
+            <h2 data-i18n="atuacao.title">O que o LabInfoS entrega</h2>
 
             <div class="pill-row" aria-label="Áreas de atuação">
-              <span class="pill">Pesquisa</span>
-              <span class="pill">Ensino</span>
-              <span class="pill">Extensão</span>
-              <span class="pill">Desenvolvimento</span>
-              <span class="pill">Consultoria técnica</span>
+              <span class="pill" data-i18n="atuacao.pill1">Pesquisa</span>
+              <span class="pill" data-i18n="atuacao.pill2">Ensino</span>
+              <span class="pill" data-i18n="atuacao.pill3">Extensão</span>
+              <span class="pill" data-i18n="atuacao.pill4">Desenvolvimento</span>
+              <span class="pill" data-i18n="atuacao.pill5">Consultoria técnica</span>
             </div>
 
-            <p class="justifyed">
-              Nosso laboratório se orgulha de trabalhar com pesquisa, extensão e ensino de forma integrativa. Buscamos excelência científica, formação de recursos humanos e impacto social em todas 
-              as nossas atividades.<br>
-              <br>
-              O projeto "Vida+ Móvel" <strong>(UERJ/DEPEXT No. 7779-2025)</strong> busca mapear a população idosa do município de Cabo Frio/RJ e promover educação em saúde e prevenção de 
-              doenças crônicas através da higiene do sono, alimentação saudável e exercícios físicos. Aqui, contamos com a participação ativa de estudantes de graduação e pós-graduação, que 
-              apoiam as atividades de pesquisa e extensão, sempre desenvolvidos com diversidade e inclusão social em mente. <br>
-              <br>
-              No LabInfoS, também nos dedicamos ao desenvolvimento de ferramentas e à prestação de apoio técnico a pesquisas na área da saúde. Conheça alguns dos projetos desenvolvidos em nosso 
-              GitHub <a href="https://github.com/drhrf" target="_blank" rel="noopener noreferrer"><strong>(ACESSE AQUI)</strong></a> ou <a href="./nec.html"><strong>CLIQUE AQUI</strong></a> para conhecer os 
-              serviços oferecidos pelo no Núcleo Bertrand Russell para Excelência Científica. 
+            <p class="justifyed" data-i18n="atuacao.p1">Nosso laboratório se orgulha de trabalhar com pesquisa, extensão e ensino de forma integrativa. Buscamos excelência científica, formação de recursos humanos e impacto social em todas as nossas atividades.</p>
+            <p class="justifyed" data-i18n-html="atuacao.p2_html">
+              No LabInfoS, também nos dedicamos ao desenvolvimento de ferramentas e à prestação de apoio técnico a pesquisas na área da saúde. Conheça alguns dos projetos desenvolvidos em nosso GitHub
+              <a href="https://github.com/drhrf" target="_blank" rel="noopener noreferrer"><strong>(ACESSE AQUI)</strong></a> ou <a href="#nec"><strong>CLIQUE AQUI</strong></a> para conhecer os serviços oferecidos pelo Núcleo Bertrand Russell para Excelência Científica.
             </p>
           </div>
 
           <aside class="panel">
-            <h3>Contato</h3>
-            <!-- <p class="muted">Preencha os dados abaixo em <code>data/site.json</code>.</p> -->
+            <h3 data-i18n="atuacao.contact_title">Contato</h3>
 
             <div class="contact-block">
               <div class="contact-item">
-                <span class="contact-label">E-mail</span>
+                <span class="contact-label" data-i18n="atuacao.contact_email">E-mail</span>
                 <a href="#" data-site="email">[email@exemplo.org]</a>
               </div>
               <div class="contact-item">
-                <span class="contact-label">Endereço</span>
+                <span class="contact-label" data-i18n="atuacao.contact_address">Endereço</span>
                 <span data-site="address">[endereço do laboratório]</span>
               </div>
               <div class="contact-item">
-                <span class="contact-label">Instituição</span>
+                <span class="contact-label" data-i18n="atuacao.contact_inst">Instituição</span>
                 <span data-site="institution">[instituição]</span>
               </div>
               <div class="contact-item">
-                <span class="contact-label">Links</span>
-                <span class="link-row" id="socialLinks">
-                  <!-- carregado de site.json -->
-                </span>
+                <span class="contact-label" data-i18n="atuacao.contact_links">Links</span>
+                <span class="link-row" id="socialLinks"></span>
               </div>
             </div>
 
             <div class="panel-cta">
-              <a class="btn primary" href="./nec.html">Conhecer o NEC</a>
-              <a class="btn ghost" href="./equipe.html">Ver pesquisadores</a>
+              <a class="btn primary" href="#nec" data-i18n="atuacao.cta_nec">Conhecer o NEC</a>
+              <a class="btn ghost" href="#equipe" data-i18n="atuacao.cta_team">Ver pesquisadores</a>
             </div>
           </aside>
         </div>
       </div>
+
+      <div class="section-connector">
+        <a href="#pesquisa" aria-label="Ir para a seção anterior" class="connector-up">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"/>
+          </svg>
+        </a>
+        <a href="#equipe" aria-label="Ir para a seção da equipe" class="connector-down">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </a>
+      </div>
     </section>
 
+    <!-- ═════════════════════════════════════════════════════════════════
+         SEÇÃO 4: PROJETO EM DESTAQUE + OPORTUNIDADES
+         ═════════════════════════════════════════════════════════════════ -->
     <section class="section">
       <div class="container">
         <div class="grid cards-2">
           <article class="card">
-            <h3>Projeto em destaque</h3>
-            <p class="justifyed">Astrocyte subtype-specific expression of the sodium-coupled citrate transporter SLC13A5 and citrate metabolism genes across Alzheimer's disease pseudoprogression: a single-nucleus RNA sequencing analysis of the human middle temporal gyrus. Patrícia Fernanda Schuck, Gustavo da Costa Ferreira, Hércules Rezende Freitas.
-                <a href="https://doi.org/10.3390/cimb48070691" target="_blank" rel="noopener noreferrer">[ACESSE AQUI]</a></p>
-            <p class="card-meta">Current Issues in Molecular Biology 2026, 48(7):691 • doi: 10.3390/cimb48070691</p>
+            <p class="section-label" data-i18n="destaque.label">Destaque</p>
+            <h3 data-i18n="destaque.title">Projeto em destaque</h3>
+            <p class="justifyed">
+              <span data-i18n="destaque.text">Astrocyte subtype-specific expression of the sodium-coupled citrate transporter SLC13A5 and citrate metabolism genes across Alzheimer's disease pseudoprogression: a single-nucleus RNA sequencing analysis of the human middle temporal gyrus. Patrícia Fernanda Schuck, Gustavo da Costa Ferreira, Hércules Rezende Freitas.</span>
+              <a href="https://doi.org/10.3390/cimb48070691" target="_blank" rel="noopener noreferrer" data-i18n="destaque.link">[ACESSE AQUI]</a></p>
+            <p class="card-meta" data-i18n="destaque.meta">Current Issues in Molecular Biology 2026, 48(7):691 • doi: 10.3390/cimb48070691</p>
           </article>
 
           <article class="card">
-            <h3>Oportunidades</h3>
-            <p class="justifyed">Você se interessa por estatística aplicada à saúde? Entre em contato conosco para oportunidades de estágio de iniciação científica e projetos de pós-graduação.</p>
-            <p class="card-meta">Contato: labinfos.uerj@gmail.com</p>
+            <p class="section-label" data-i18n="join.label">Junte-se a nós</p>
+            <h3 data-i18n="join.title">Oportunidades</h3>
+            <p class="justifyed" data-i18n="join.text">Você se interessa por estatística aplicada à saúde? Entre em contato conosco para oportunidades de estágio de iniciação científica e projetos de pós-graduação.</p>
+            <p class="card-meta" data-i18n="join.contact">Contato: labinfos.uerj@gmail.com</p>
           </article>
+        </div>
+      </div>
+
+      <div class="section-connector">
+        <a href="#pesquisa" aria-label="Ir para a seção anterior" class="connector-up">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"/>
+          </svg>
+        </a>
+        <a href="#equipe" aria-label="Ir para a seção da equipe" class="connector-down">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ═════════════════════════════════════════════════════════════════
+         SEÇÃO 5: EQUIPE
+         ═════════════════════════════════════════════════════════════════ -->
+    <section id="equipe" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label" data-i18n="team.label">Pessoas</p>
+          <h2 data-i18n="team.title">Equipe</h2>
+          <p class="lead" data-i18n="team.subtitle">Nossa equipe reune docentes, pesquisadores e alunos da FCM/UERJ, além de colaboradores nacionais e internacionais.</p>
+        </div>
+
+        <div class="team-controls" role="search" aria-label="Buscar pessoas">
+          <label class="input">
+            <span class="input-label" data-i18n="team.search">Buscar</span>
+            <input id="teamQuery" type="search" data-i18n-placeholder="team.search_placeholder" placeholder="Nome, área, palavras-chave…" autocomplete="off" />
+          </label>
+
+          <label class="input">
+            <span class="input-label" data-i18n="team.category">Categoria</span>
+            <select id="teamRole">
+              <option value="" data-i18n="team.category_all">Todas</option>
+            </select>
+          </label>
+
+          <button class="btn ghost" type="button" id="teamReset" data-i18n="team.clear">Limpar</button>
+        </div>
+
+        <div class="results-meta">
+          <span id="teamCount">—</span>
+          <span class="muted" data-i18n="team.found">pessoas encontradas</span>
+        </div>
+
+        <div id="teamGrid" class="team-list" aria-live="polite"></div>
+      </div>
+
+      <div class="section-connector">
+        <a href="#pesquisa" aria-label="Ir para a seção anterior" class="connector-up">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"/>
+          </svg>
+        </a>
+        <a href="#publicacoes" aria-label="Ir para a seção de publicações" class="connector-down">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ═════════════════════════════════════════════════════════════════
+         SEÇÃO 6: PUBLICAÇÕES
+         ═════════════════════════════════════════════════════════════════ -->
+    <section id="publicacoes" class="section">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label" data-i18n="pubs.label">Produção científica</p>
+          <h2 data-i18n="pubs.title">Publicações</h2>
+          <p class="muted" data-i18n="pubs.subtitle">Conheça nossas publicações abaixo. Se precisar, utilize a barra de ferramentas para filtrar por palavra-chave, ano ou tipo.</p>
+        </div>
+
+        <div class="pub-controls" role="search" aria-label="Filtrar publicações">
+          <label class="input">
+            <span class="input-label" data-i18n="pubs.search">Buscar</span>
+            <input id="pubQuery" type="search" data-i18n-placeholder="pubs.search_placeholder" placeholder="Título, autor, periódico, palavra-chave…" autocomplete="off" />
+          </label>
+
+          <label class="input">
+            <span class="input-label" data-i18n="pubs.year">Ano</span>
+            <select id="pubYear">
+              <option value="" data-i18n="pubs.year_all">Todos</option>
+            </select>
+          </label>
+
+          <label class="input">
+            <span class="input-label" data-i18n="pubs.type">Tipo</span>
+            <select id="pubType">
+              <option value="" data-i18n="pubs.type_all">Todos</option>
+            </select>
+          </label>
+
+          <button class="btn ghost" type="button" id="pubReset" data-i18n="pubs.clear">Limpar</button>
+        </div>
+
+        <div class="results-meta">
+          <span id="pubCount">—</span>
+          <span class="muted" data-i18n="pubs.found">publicações encontradas</span>
+        </div>
+
+        <div id="pubList" class="pub-list" aria-live="polite"></div>
+      </div>
+
+      <div class="section-connector">
+        <a href="#equipe" aria-label="Ir para a seção anterior" class="connector-up">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"/>
+          </svg>
+        </a>
+        <a href="#nec" aria-label="Ir para a seção do NEC" class="connector-down">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ═════════════════════════════════════════════════════════════════
+         SEÇÃO 7: NEC
+         ═════════════════════════════════════════════════════════════════ -->
+    <section id="nec" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label" data-i18n="nec.label">Consultoria científica</p>
+          <h2 data-i18n="nec.title">NEC — Núcleo Bertrand Russell para Excelência Científica</h2>
+          <p class="lead justifyed" data-i18n="nec.description">O Núcleo Bertrand Russell para Excelência Científica (NEC) é um órgão de consultoria criado para fomentar e aprimorar projetos científicos no âmbito da UERJ, com prioridade para iniciativas conduzidas por docentes da Faculdade de Ciências Médicas. Sua atuação oferece suporte integral ao projeto, da elaboração e submissão ao registro e à publicação, com foco em rigor metodológico, excelência e inovação. O NEC também estimula a cooperação entre setores acadêmicos, técnicos e administrativos, fortalecendo a integração entre pesquisadores e promovendo parcerias internas e externas. Quando houver atendimento a pessoas ou instituições fora da UERJ, a prestação do serviço será mediada pelo CEPUERJ, conforme o regimento.</p>
+        </div>
+
+        <div class="grid cards-3" id="necServices" style="margin-bottom: 2rem;"></div>
+
+        <div class="split">
+          <div>
+            <h2 data-i18n="nec.how_title">Como trabalhamos</h2>
+            <div class="prose" id="necHowWeWork"></div>
+          </div>
+
+          <aside class="panel">
+            <h3 data-i18n="nec.contact_title">Solicitar apoio</h3>
+            <div class="contact-block">
+              <div class="contact-item">
+                <span class="contact-label" data-i18n="nec.contact_email">E-mail</span>
+                <a href="#" data-nec="email">[nec@exemplo.org]</a>
+              </div>
+              <div class="contact-item">
+                <span class="contact-label" data-i18n="nec.contact_form">Formulário</span>
+                <a href="#" data-nec="formUrl">[link do formulário]</a>
+              </div>
+              <div class="contact-item">
+                <span class="contact-label" data-i18n="nec.contact_scope">Escopo</span>
+                <span data-nec="scopeNote">[o que entra / o que não entra]</span>
+              </div>
+            </div>
+
+            <div class="panel-cta">
+              <a class="btn primary" href="#equipe" data-i18n="nec.cta_team">Ver equipe</a>
+              <a class="btn ghost" href="#publicacoes" data-i18n="nec.cta_pubs">Ver publicações</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+
+      <div class="section-connector">
+        <a href="#publicacoes" aria-label="Ir para a seção anterior" class="connector-up">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"/>
+          </svg>
+        </a>
+        <a href="#console" aria-label="Ir para o console R" class="connector-down">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ═════════════════════════════════════════════════════════════════
+         SEÇÃO 8: CONSOLE R
+         ═════════════════════════════════════════════════════════════════ -->
+    <section id="console" class="section webr-section">
+      <div class="container">
+        <p class="section-label" data-i18n="console.label">Ferramenta interativa</p>
+        <h2 data-i18n="console.title">Console R no navegador</h2>
+        <p class="webr-description" data-i18n="console.description">Experimente análises em R diretamente aqui, sem instalar nada. O ambiente é executado localmente no seu navegador via WebAssembly.</p>
+
+        <div class="webr-console" role="region" aria-label="Console R interativo">
+          <div class="webr-titlebar" aria-hidden="true">
+            <span class="webr-dot red"></span>
+            <span class="webr-dot yellow"></span>
+            <span class="webr-dot green"></span>
+            <span class="webr-titlebar-label">R via WebR</span>
+          </div>
+
+          <div class="webr-output" id="webr-output" aria-live="polite" aria-label="Saída do console R">
+            <span class="webr-info" data-i18n="console.loading">Inicializando R… isso pode levar alguns segundos.</span>
+          </div>
+
+          <div class="webr-input-row">
+            <span class="webr-prompt" aria-hidden="true">&gt;</span>
+            <input
+              class="webr-input"
+              id="webr-input"
+              type="text"
+              autocomplete="off"
+              autocorrect="off"
+              autocapitalize="off"
+              spellcheck="false"
+              data-i18n-placeholder="console.placeholder"
+              placeholder="Digite um comando R e pressione Enter ou clique em Executar"
+              disabled
+              aria-label="Entrada de código R"
+            />
+            <button class="webr-run-btn" id="webr-run-btn" disabled aria-label="Executar código R" data-i18n="console.run">Executar</button>
+          </div>
+        </div>
+
+        <div class="webr-status" id="webr-status" aria-live="polite">
+          <span class="webr-status-dot" id="webr-status-dot"></span>
+          <span id="webr-status-text" data-i18n="console.loading_webr">Carregando WebR…</span>
+        </div>
+
+        <div class="webr-examples" id="webr-examples" aria-label="Exemplos de código R">
+          <span style="font-size:0.78rem; opacity:0.5; align-self:center;" data-i18n="console.examples">Exemplos:</span>
+          <button class="webr-example-btn" data-code="summary(c(1,2,3,4,5,6,7,8,9,10))">summary()</button>
+          <button class="webr-example-btn" data-code="x <- rnorm(100); mean(x)">rnorm()</button>
+          <button class="webr-example-btn" data-code="table(sample(c('A','B','C'), 30, replace=TRUE))">table()</button>
+          <button class="webr-example-btn" data-code="cor(1:10, c(2,4,3,5,7,6,8,9,10,11))">cor()</button>
+          <button class="webr-example-btn" data-code="t.test(rnorm(20, mean=5), rnorm(20, mean=5.5))">t.test()</button>
+        </div>
+
+        <p class="webr-disclaimer" data-i18n="console.disclaimer">Os cálculos ocorrem inteiramente no seu dispositivo. Nenhum dado é enviado a servidores externos.</p>
+
+        <div id="webr-plot-area" style="display:none; margin-top:1rem;">
+          <button id="webr-plot-toggle" class="webr-example-btn" style="margin-bottom:0.5rem;">📊 Mostrar gráfico</button>
+          <canvas id="webr-canvas" style="display:none; border-radius:8px; max-width:100%;"></canvas>
+        </div>
+      </div>
+
+      <div class="section-connector">
+        <a href="#nec" aria-label="Ir para a seção anterior" class="connector-up">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"/>
+          </svg>
+        </a>
+        <a href="#contato" aria-label="Ir para a seção de contato" class="connector-down">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ═════════════════════════════════════════════════════════════════
+         SEÇÃO 9: CONTATO
+         ═════════════════════════════════════════════════════════════════ -->
+    <section id="contato" class="section">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label" data-i18n="contact.label">Fale conosco</p>
+          <h2 data-i18n="contact.title">Contato</h2>
+        </div>
+
+        <div class="grid cards-2">
+          <div class="card">
+            <h3 data-i18n="contact.info_title">Informações</h3>
+            <div class="contact-block">
+              <div class="contact-item">
+                <span class="contact-label" data-i18n="contact.email">E-mail</span>
+                <a href="mailto:labinfos.uerj@gmail.com">labinfos.uerj@gmail.com</a>
+              </div>
+              <div class="contact-item">
+                <span class="contact-label" data-i18n="contact.address">Endereço</span>
+                <span>FCM – Jardim Flamboyant, 28905-320, Cabo Frio/RJ</span>
+              </div>
+              <div class="contact-item">
+                <span class="contact-label" data-i18n="contact.inst">Instituição</span>
+                <span>UERJ – Universidade do Estado do Rio de Janeiro</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 data-i18n="contact.links_title">Links</h3>
+            <div class="link-row">
+              <a href="https://fcm.uerj.br/" target="_blank" rel="noopener noreferrer">FCM</a>
+              <a href="https://dgp.cnpq.br/dgp/espelhogrupo/7893660876727978" target="_blank" rel="noopener noreferrer">DGP/CNPq</a>
+              <a href="https://www.linkedin.com/in/proffreitashr/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a href="https://github.com/drhrf" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+            <p class="muted" style="margin-top: 1rem;" data-i18n="contact.join_text">Interessado em colaborar? Entre em contato conosco para oportunidades de pesquisa, estágio e pós-graduação.</p>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- ═══════════════════════════════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════════════════════════════ -->
   <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-left">
-        <p class="footer-brand"><strong>LabInfoS</strong> — Laboratório de Informática em Saúde</p>
-        <p class="muted">© <span id="year"></span> • Conteúdo sob responsabilidade do laboratório.</p>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-col">
+          <p class="footer-brand"><strong>LabInfoS</strong></p>
+          <p data-i18n="footer.lab_name">Laboratório de Informática em Saúde</p>
+          <p data-i18n="footer.address1">UERJ — Campus Cabo Frio</p>
+          <p data-i18n="footer.address2">FCM – Jardim Flamboyant, 28905-320</p>
+          <p data-i18n="footer.address3">Cabo Frio/RJ, Brasil</p>
+          <p style="margin-top:0.5rem;">
+            <a href="mailto:labinfos.uerj@gmail.com" style="color:var(--footer-text);">labinfos.uerj@gmail.com</a>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.nav_title">Navegação</h4>
+          <a href="#sobre" data-i18n="nav.sobre">Sobre</a>
+          <a href="#pesquisa" data-i18n="nav.pesquisa">Pesquisa</a>
+          <a href="#equipe" data-i18n="nav.equipe">Equipe</a>
+          <a href="#publicacoes" data-i18n="nav.publicacoes">Publicações</a>
+          <a href="#nec" data-i18n="nav.nec">NEC</a>
+          <a href="#console" data-i18n="nav.console">Console R</a>
+          <a href="#contato" data-i18n="nav.contato">Contato</a>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.links_title">Links</h4>
+          <a href="https://fcm.uerj.br/" target="_blank" rel="noopener noreferrer">FCM/UERJ</a>
+          <a href="https://www.uerj.br/" target="_blank" rel="noopener noreferrer">UERJ</a>
+          <a href="https://github.com/drhrf" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/labinfos-uerj-1337b83b5" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
       </div>
 
-      <div class="footer-right">
-        <a href="./publicacoes.html">Publicações</a>
-        <a href="./equipe.html">Equipe</a>
-        <a href="./nec.html">NEC</a>
-        <a href="./index.html#conteudo">Topo</a>
+      <div class="footer-bottom">
+        <span>&copy; <span id="year"></span> <span data-i18n="footer.copyright">LabInfoS — Laboratório de Informática em Saúde. Conteúdo sob responsabilidade do laboratório.</span></span>
+        <span><a href="#sobre" data-i18n="footer.top">Topo ↑</a></span>
       </div>
     </div>
   </footer>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       WebR Bootstrap — ES module
+       ═══════════════════════════════════════════════════════════════════ -->
+  <script type="module">
+    import { WebR } from 'https://webr.r-wasm.org/latest/webr.mjs';
+
+    const outputEl   = document.getElementById('webr-output');
+    const inputEl    = document.getElementById('webr-input');
+    const runBtn     = document.getElementById('webr-run-btn');
+    const statusDot  = document.getElementById('webr-status-dot');
+    const statusText = document.getElementById('webr-status-text');
+    const exampleBtns = document.querySelectorAll('.webr-example-btn');
+    const plotArea   = document.getElementById('webr-plot-area');
+    const plotCanvas = document.getElementById('webr-canvas');
+    const plotToggle = document.getElementById('webr-plot-toggle');
+
+    const history = [];
+    let histIdx = -1;
+    let plotStarted = false;
+
+    // Get i18n strings for WebR dynamic text
+    function getI18n(key, fallback) {
+      const el = document.querySelector(`[data-i18n="${key}"]`);
+      return el ? el.textContent.trim() : fallback;
+    }
+
+    function appendOutput(text, cls = 'webr-stdout') {
+      const info = outputEl.querySelector('.webr-info');
+      if (info) info.remove();
+      const span = document.createElement('span');
+      span.className = cls;
+      span.textContent = text;
+      outputEl.appendChild(span);
+      outputEl.scrollTop = outputEl.scrollHeight;
+    }
+
+    function setStatus(state, label) {
+      statusDot.className = 'webr-status-dot ' + state;
+      statusText.textContent = label;
+    }
+
+    function setReady(ready) {
+      inputEl.disabled = !ready;
+      runBtn.disabled  = !ready;
+      exampleBtns.forEach(b => b.disabled = !ready);
+    }
+
+    plotToggle.addEventListener('click', () => {
+      const visible = plotCanvas.style.display !== 'none';
+      plotCanvas.style.display = visible ? 'none' : 'block';
+      plotToggle.textContent = visible ? '📊 Mostrar gráfico' : '📊 Ocultar gráfico';
+    });
+
+    const webR = new WebR();
+    await webR.init();
+
+    (async () => {
+      for (;;) {
+        const msg = await webR.read();
+        switch (msg.type) {
+          case 'stdout':
+            appendOutput(msg.data + '\n', 'webr-stdout');
+            break;
+          case 'stderr':
+            appendOutput(msg.data + '\n', 'webr-stderr');
+            break;
+          case 'canvas': {
+            const showPlot = () => {
+              plotArea.style.display   = 'block';
+              plotCanvas.style.display = 'block';
+              plotToggle.textContent   = '📊 Ocultar gráfico';
+            };
+            if (msg.data.event === 'canvasNewPage') {
+              plotStarted = false;
+            } else if (msg.data.event === 'canvasImage') {
+              const bmp = msg.data.image;
+              if (!plotStarted) {
+                plotCanvas.width  = bmp.width;
+                plotCanvas.height = bmp.height;
+                const ctx = plotCanvas.getContext('2d');
+                ctx.fillStyle = '#ffffff';
+                ctx.fillRect(0, 0, bmp.width, bmp.height);
+                plotStarted = true;
+              }
+              plotCanvas.getContext('2d').drawImage(bmp, 0, 0);
+              showPlot();
+            }
+            break;
+          }
+          case 'prompt':
+            setReady(true);
+            setStatus('ready', getI18n('console.ready', 'R pronto'));
+            break;
+        }
+      }
+    })();
+
+    await webR.evalRVoid('options(device=webr::canvas)');
+
+    setStatus('ready', getI18n('console.ready', 'R pronto'));
+    setReady(true);
+    outputEl.innerHTML = '';
+    appendOutput(
+      'R rodando via WebR ' + (await webR.evalRString('R.version.string')) + '\n' +
+      'Digite um comando abaixo ou escolha um exemplo.\n\n',
+      'webr-info'
+    );
+
+    async function runCode(code) {
+      code = code.trim();
+      if (!code) return;
+
+      appendOutput('> ' + code + '\n', 'webr-stdout');
+      history.unshift(code);
+      histIdx = -1;
+
+      setReady(false);
+      setStatus('ready', getI18n('console.executing', 'Executando…'));
+      plotStarted = false;
+
+      await webR.writeConsole(code + '\n');
+
+      inputEl.value = '';
+      inputEl.focus();
+    }
+
+    runBtn.addEventListener('click', () => runCode(inputEl.value));
+
+    inputEl.addEventListener('keydown', e => {
+      if (e.key === 'Enter')     { e.preventDefault(); runCode(inputEl.value); }
+      if (e.key === 'ArrowUp')   { e.preventDefault(); histIdx = Math.min(histIdx + 1, history.length - 1); inputEl.value = history[histIdx] ?? ''; }
+      if (e.key === 'ArrowDown') { e.preventDefault(); histIdx = Math.max(histIdx - 1, -1); inputEl.value = histIdx === -1 ? '' : (history[histIdx] ?? ''); }
+    });
+
+    exampleBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (!btn.dataset.code) return;
+        inputEl.value = btn.dataset.code;
+        inputEl.focus();
+      });
+    });
+  </script>
+
 </body>
 </html>
