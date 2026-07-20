@@ -175,6 +175,9 @@ h3 {
   margin: 0;
   max-width: 60ch;
 }
+.section-header p.justifyed {
+  max-width: none;
+}
 
 /* Two-column split layout */
 .split {
