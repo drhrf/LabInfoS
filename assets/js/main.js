@@ -688,10 +688,12 @@
     const how = $("#necHowWeWork");
     if (how) {
       how.innerHTML = "";
-      (nec.howWeWork || []).forEach((p) => {
+      const tHow = (state.i18n && state.i18n[state.currentLang]) ? state.i18n[state.currentLang] : null;
+      (nec.howWeWork || []).forEach((p, idx) => {
+        const text = (tHow && tHow[`nec.how${idx + 1}`]) ? tHow[`nec.how${idx + 1}`] : safeText(p);
         const para = document.createElement("p");
         para.className = "justifyed";
-        para.textContent = safeText(p);
+        para.textContent = text;
         how.appendChild(para);
       });
     }
